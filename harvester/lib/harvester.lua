@@ -1,5 +1,5 @@
 
-util = dofile("./harvester-util")
+util = require("harvester-util")
 
 local db
 local running = false

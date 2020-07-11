@@ -1,6 +1,7 @@
 local util = dofile("./harvester-util")
 
-local USAGE_SET = "Usage: `set <address: string> <side: string> [=slot: number] [threshold: number]`"
+local USAGE_INIT = "init"
+local USAGE_SET = "set <address: string> <side: string> [=slot: number] [threshold: number]"
 
 -- === MODULE
 local module = {}
@@ -38,6 +39,12 @@ function module.set (args, opts)
     end
 
     util.writeStorage(storage)
+end
+
+function module.help ()
+    for _, v in ipairs({ USAGE_INIT, USAGE_SET }) do
+        print("harvester-edit " .. v)
+    end
 end
 
 return module

@@ -1,4 +1,5 @@
 local util = require("harvester-util")
+local shell = require("shell")
 
 local USAGE_INIT = "init"
 local USAGE_SET = "set <address: string> <side: string> [=slot: number] [threshold: number]"
@@ -49,9 +50,9 @@ end
 
 -- CLI
 local args, opts = shell.parse(...)
-local cmd = string.lower(table.remove(args, 1))
+local cmd = #args > 1 and string.lower(table.remove(args, 1)) or nil
 
-if module[cmd] and not opts.help then
+if cmd and module[cmd] and not opts.help then
     module[cmd](args, opts)
 else
     module.help(args, opts)

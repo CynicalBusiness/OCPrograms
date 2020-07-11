@@ -4,7 +4,7 @@
         ["CynicalBusiness/OCPrograms"] = {
             ["harvesters"] = {
                 files = {
-                    [":master/harvester"] = "/harvester",
+                    [":master/harvester/usr"] = "/lib/harvester",
                     [":master/harvester/bin"] = "/bin",
                     ["master/harvester/man/harvester.txt"] = "/man/harvester",
                     ["master/harvester/man/harvester-edit.txt"] = "/man/harvester-edit",

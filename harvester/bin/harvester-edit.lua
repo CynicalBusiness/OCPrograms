@@ -1,4 +1,4 @@
-local harvesterEditor = dofile("../harvester-edit")
+local harvesterEditor = dofile("../lib/harvester/harvester-edit")
 
 local args, opts = shell.parse(...)
 local cmd = string.lower(table.remove(args, 1))
